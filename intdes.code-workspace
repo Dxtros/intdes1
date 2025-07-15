@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "../Unknown"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"dotnet.defaultSolution": "Unknown.sln",
+		"liveServer.settings.multiRootWorkspaceName": "intdes1"
+	}
+}
