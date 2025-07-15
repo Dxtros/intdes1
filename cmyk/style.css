@@ -1,0 +1,250 @@
+/* Neutralizes the default styles applied by browsers */
+@import url("reset.css");
+/* Font Import */
+@import url("https://fonts.googleapis.com/css2?family=Sixtyfour:BLED,SCAN@0..100,-53..100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+.page-container {
+  height: 100vh;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.corner-block {
+  position: fixed;
+  width: calc(20vh + 2vw);
+  height: calc(20vh + 2vw);
+  transform: scale(1);
+  transition: transform 0.3s ease;
+  animation: subtleScale 0.9s ease 3;
+  animation-delay: 10s;
+}
+.corner-block a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  outline: none;
+}
+
+@keyframes subtleScale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.corner-block:hover {
+  transform: scale(2);
+}
+
+.left-top-corner {
+  background-color: #00ffff;
+  top: 0;
+  left: 0;
+}
+
+.right-top-corner {
+  background-color: #ff00ff;
+  top: 0;
+  right: 0;
+}
+
+.left-top-crop {
+  position: absolute;
+  top: -50px;
+  left: -120px;
+}
+
+.right-top-crop {
+  position: absolute;
+  top: -50px;
+  right: -150px;
+}
+
+main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 1;
+  /* need to adjust this */
+  flex-basis: 23.5rem;
+  min-width: 18rem;
+  height: 41.5rem;
+
+  gap: 0.5rem;
+}
+
+.title-container {
+  position: relative;
+  width: 100%;
+}
+
+h1 {
+  font-family: "Sixtyfour", monospace;
+  font-weight: 400;
+  font-variation-settings: "SCAN" 100;
+  font-size: clamp(2.5rem, 1.819rem + 2.724vw, 3.563rem);
+  flex-basis: 0;
+}
+
+.inks-text {
+  font-family: "Sixtyfour", monospace;
+  font-weight: 400;
+  font-variation-settings: "SCAN" 100;
+  font-size: clamp(2.5rem, 1.819rem + 2.724vw, 3.563rem);
+  flex-basis: 0;
+}
+
+.subtitle {
+  font-size: clamp(0.938rem, 0.577rem + 1.442vw, 1.5rem);
+  font-variation-settings: "SCAN" 21;
+  position: absolute;
+  right: 0.1rem;
+  bottom: 3rem;
+}
+
+.underline {
+  width: 100%;
+  height: 2%;
+  background: linear-gradient(
+    90deg,
+    #00ffff 0%,
+    #ff00ff 25%,
+    #ffff00 75%,
+    black 100%
+  );
+  margin-bottom: 3rem;
+}
+
+p {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: clamp(0.625rem, 0.465rem + 0.641vw, 0.875rem);
+  margin-bottom: 0.875rem;
+}
+
+.svg-container {
+  display: flex;
+  margin-top: 2rem;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  /*   gap: 5rem; */
+}
+.svg {
+  width: clamp(6.25rem, 4.247rem + 8.013vw, 9.375rem);
+  height: auto;
+}
+
+.left-bot-crop {
+  position: absolute;
+  bottom: -50px;
+  right: -150px;
+}
+
+.right-bot-crop {
+  position: absolute;
+  bottom: -50px;
+  left: -120px;
+}
+
+.left-bot-corner {
+  background-color: #ffff00;
+  bottom: 0;
+  left: 0;
+}
+
+.right-bot-corner {
+  background-color: #000000;
+  bottom: 0;
+  right: 0;
+}
+
+/* Global detail page */
+.detail-page-container {
+  height: 100vh;
+}
+
+.detail-corner {
+  width: calc(35vh + 10vw);
+  height: calc(35vh + 10vw);
+  transform: scale(1);
+  transition: transform 0.3s ease;
+}
+
+.detail-corner:hover {
+  transform: scale(1.05);
+}
+
+.detail-text-container {
+  width: calc(35vh + 10vw - 3.5rem); /* accounts for margins */
+  min-width: 30ch;
+}
+
+/* Cyan detail page */
+
+.cyan-corner {
+  background-color: #00ffff;
+  border: 2px solid #00ffff;
+  top: 0;
+  left: 0;
+}
+.cyan-detail-text {
+  margin: 3rem 0 3.5rem 3.5rem;
+}
+
+/* magenta detail page */
+
+.magenta-corner {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #ff00ff;
+  border: 2px solid #ff00ff;
+}
+.magenta-detail-text {
+  position:fixed;
+  bottom: 0;
+  right: 0;
+  margin: 3rem 3.5rem 3.5rem 0rem;
+}
+
+/* Yellow detail page */
+
+.yellow-corner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: #ffff00;
+  border: 2px solid #ffff00;
+}
+.yellow-detail-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 3rem 0rem 3.5rem 3.5rem;
+}
+
+/* black detail page */
+
+.black-corner {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background-color: #000000;
+  border: 2px solid #000000;
+}
+.black-detail-text {
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 3rem 3.5rem 3.5rem 0rem;
+}

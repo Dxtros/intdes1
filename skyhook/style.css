@@ -1,0 +1,505 @@
+/* Neutralizes the default styles applied by browsers */
+@import url("reset.css");
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Phudu:wght@300..900&display=swap");
+
+.home-body {
+  height: 100%;
+  overflow: hidden;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 145vh;
+}
+.home-nav {
+  background-color: #334461;
+  width: 100%;
+
+  flex-wrap: nowrap;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.home-link {
+  font-family: Archivo, sans-serif;
+  font-weight: 700;
+  font-size: clamp(0.5rem, 1rem + 2vw, 3rem);
+  color: #d86c3f;
+
+  padding: 1.2rem;
+
+  text-align: center;
+  background-color: transparent;
+
+  position: relative;
+  z-index: 1;
+
+  flex: 1 1 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+.home-link:hover {
+  transform: scaleY(1.1);
+  position: relative;
+  z-index: 10;
+}
+
+.home-link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #334461;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+
+  z-index: -1;
+}
+
+.home-link:hover::before {
+  position: absolute;
+  z-index: -1;
+
+  transform: scaleY(1.09);
+  transform: scalex(1.01);
+
+  border-left: 3px solid #d86c3f;
+  border-right: 3px solid #d86c3f;
+  border-bottom: 3px solid #d86c3f;
+
+  box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.25);
+}
+
+.center {
+  border-left: 3px solid #d86c3f;
+  border-right: 3px solid #d86c3f;
+  z-index: 1;
+}
+.center:hover {
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+}
+
+.home-background {
+  min-height: 100vh;
+
+  position: relative;
+  z-index: -100;
+}
+
+.home-background::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 130%;
+  background-image: url(https://cdn.glitch.global/9d8d7a23-dc5a-4e0b-9a74-12e5ba205e9d/Home-background.jpg?v=1741833521728);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  background-attachment: fixed;
+  filter: blur(5px) brightness(150%) contrast(50%);
+  z-index: -100;
+}
+
+.home-logo {
+  margin: 0 auto;
+  height: auto;
+  display: block;
+  width: 63%;
+}
+.home-footer {
+  background-image: url(https://cdn.glitch.global/9d8d7a23-dc5a-4e0b-9a74-12e5ba205e9d/Home-footer.svg?v=1741814593596);
+  min-width: 100vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 3rem;
+  margin-top: 2rem;
+  z-index: 5;
+  position: absolute;
+  bottom: 0;
+}
+
+.home-footer-text {
+  color: #334461;
+  font-size: clamp(0.625rem, calc(0.75rem + 0.9375vw), 1.5rem);
+  font-family: Phudu, sans-serif;
+  font-weight: 600;
+  word-wrap: break-word;
+  padding-top: 5rem;
+}
+
+.join-button {
+  background-color: #334461;
+  color: #d86c3f;
+  font-family: Phudu, sans-serif;
+  font-size: clamp(1.75rem, calc(1rem + 2vw), 2.5rem);
+  font-weight: 600;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+
+
+}
+.join-button:hover {
+  box-shadow: -2px 5px 0.8999999761581421px rgba(0, 0, 0, 0.25);
+}
+
+/* ==Detail pages global== */
+
+.detail-header {
+  background-color: #334461;
+  text-align: center;
+  padding: 1rem;
+}
+.page-title-text {
+  color: #d86c3f;
+  font-size: clamp(2.5rem, 1.5rem + 5vw, 8rem);
+  font-family: Phudu, sans-serif;
+  font-weight: 700;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.detail-background {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.detail-background::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(https://cdn.glitch.global/9d8d7a23-dc5a-4e0b-9a74-12e5ba205e9d/b8c78d24-e590-4123-9b3e-a4c5e81aab47.jpg?v=1742524696274);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  filter: opacity(30%) saturate(60%);
+  z-index: -1;
+}
+.hamburger-icon {
+  font-size: 2rem;
+
+  color: #D86C3F;
+  display: none;
+}
+.mobile-nav-container {
+  background-color: #334461;
+  color: #D86C3F;
+  font-size: 1.5rem;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+  font-family: Archivo, sans-serif;
+  font-weight: 700;
+}
+
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 20px;
+}
+
+.mobile-nav-link {
+  transition: all 500ms;
+}
+
+.mobile-nav-link:hover {
+  color: #FFAC89;
+}
+
+.close-button {
+  font-size: 2rem;
+  transition: all 500ms;
+
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  padding: 20px;
+}
+
+.close-button:hover {
+  color: red;
+}
+.detail-nav-container {
+  z-index: 5;
+  /* Define a specific height */
+  height: 0px;
+  position: sticky;
+  top: 8vh;
+}
+
+.detail-nav {
+  padding-top: 10vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 70vw;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.right-nav {
+  display: flex;
+  flex-direction: column;
+  text-align: end;
+
+  font-size: clamp(1rem, 0.85rem + 0.75vw, 1.5rem);
+  font-family: "Archivo Narrow", sans-serif;
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+.right-nav-home:hover {
+  color: #d86c3f;
+}
+.right-nav-about:hover {
+  color: #d86c3f;
+}
+
+.right-nav-new-climbers:hover {
+  color: #d86c3f;
+}
+
+.right-nav-events:hover {
+  color: #d86c3f;
+}
+
+.orange-text {
+  color: #d86c3f;
+}
+
+.detail-main {
+  display: flex;
+  position: relative;
+  max-width: clamp(400px, 50vw, 800px);
+
+  backdrop-filter: blur(5px);
+  padding: 10vh 2rem 8vh 2rem;
+  min-height: 100vh;
+ 
+  /*   padding-top:10vh;
+  padding-bottom: 8vh; /* Adjusts page height */
+}
+.main-text-container {
+  width: clamp(45ch, 75%, 72ch);
+  margin: 0 auto;
+}
+h2 {
+  font-size: clamp(1.25rem, 1rem + 1.25vw, 1.5rem);
+  font-family: Archivo, sans-serif;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: clamp(0.875rem, 0.75rem + 0.625vw, 1.125rem);
+  font-family: Archivo, sans-serif;
+  font-weight: 400;
+  line-height: 21.6px;
+  margin-bottom: 0.8rem;
+  max-width: 60ch;
+}
+
+.detail-footer {
+  position: relative;
+
+  background-image: url(https://cdn.glitch.global/9d8d7a23-dc5a-4e0b-9a74-12e5ba205e9d/Home-footer.svg?v=1741814593596);
+  width: 100%;
+  min-height: 200px;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  margin-top: -5rem;
+}
+
+.footer-socials-container {
+  margin: 1rem 0 2rem 3rem;
+}
+.footer-logo {
+  margin: 0 3rem 3rem 0;
+}
+
+/* ===New Climbers Page=== */
+
+.img-new-climb {
+  margin-bottom: 2rem;
+  height: auto;
+}
+
+li {
+  font-size: clamp(0.875rem, 0.75rem + 0.625vw, 1.125rem);
+  font-family: Archivo, sans-serif;
+  font-weight: 400;
+  line-height: 21.6px;
+  margin-bottom: 0.4rem;
+}
+li strong {
+  font-weight: 600;
+}
+
+/* === Events Page === */
+.detail-main-event{
+  display: flex;
+  position: relative;
+  width: 100%;
+
+  backdrop-filter: blur(5px);
+  padding: 5rem 2rem 5rem 3rem;
+  
+  min-height: 20vh;
+  flex-direction:row;
+  justify-content: space-between;
+  align-content: flex-start;
+}
+
+.event-body{
+  max-width: 64ch;
+  flex: 1;
+
+  margin-right: 7%;
+  min-width: 20ch;
+}
+.event-title-container{
+  margin-left: 2%;
+}
+.all-event-container{
+  width: 100vw;
+  background-color:#FFAC89;
+  border-top: 4px solid black;
+  border-bottom: 4px solid black;
+  margin-bottom: 10rem;
+  padding:2rem;
+}
+.event-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 30%;
+  flex:1;
+  
+}
+.event-containers{
+  margin-top:2rem;
+}
+.event-divider{
+   display: block;
+  height: 4px;
+  border: 0;
+  border-top: 4px solid black;
+  margin: 2rem 0;
+  padding: 0;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  overflow-x: hidden;
+}
+
+.event-background {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.event-background::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(https://cdn.glitch.global/9d8d7a23-dc5a-4e0b-9a74-12e5ba205e9d/b8c78d24-e590-4123-9b3e-a4c5e81aab47.jpg?v=1742524696274);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  filter: opacity(30%) saturate(60%);
+  z-index: -1;
+}
+
+
+
+@media (max-width: 650px) {
+  .main-text-container {
+    width: 100%;
+    max-width: 72ch;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .detail-main {
+    width: 80vw;
+  }
+
+  .detail-nav-container {
+    display: none;
+  }
+  .event-nav{
+    display:none;
+  }
+  .footer-socials-container {
+    margin: 0 auto 1.5rem;
+  }
+  .footer-logo {
+    margin: 0 auto 1.5rem;
+  }
+  .home-link {
+    font-size: 1rem;
+  }
+
+  .home-footer {
+    margin: 0 auto auto;
+  }
+   .hamburger-icon {
+    display: block;
+  }
+  .detail-header{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+  }
+  .event-body{
+    margin-right:0;
+  }
+  .event-title-container{
+  margin-left: 0;
+}
+  .event-container{
+   gap:1%; 
+  }
+}
